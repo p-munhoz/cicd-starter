@@ -16,5 +16,5 @@ runs:
         cache: 'pip'
     - run: pip install -r requirements.txt
       shell: bash
-    - run: python -m pytest --junit-xml=test-results.xml
+    - run: python -m pytest
       shell: bash
