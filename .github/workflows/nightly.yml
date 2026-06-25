@@ -1,0 +1,14 @@
+name: Nightly
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-and-test
+        with:
+          python-version: '3.11'

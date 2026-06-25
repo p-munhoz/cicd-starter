@@ -10,12 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: ./.github/actions/setup-and-test
         with:
           python-version: '3.12'
-          cache: 'pip'
-      - run: pip install -r requirements.txt
-      - run: python -m pytest --junit-xml=test-results.xml
       - uses: actions/upload-artifact@v4
         if: always()
         with:
