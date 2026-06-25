@@ -6,4 +6,4 @@ def test_freezing():
 
 
 def test_boiling():
-    assert celsius_to_fahrenheit(100) == 100   # wrong on purpose
+    assert celsius_to_fahrenheit(100) == 212
